@@ -214,8 +214,6 @@ const main = async () => {
     logger.log("\n\n");
     const events = recording.replay();
     const content = events.map((e) => `${e.data.join("")}`).join("  \n");
-    const capacityChange = familyCapacitySize2 - familyCapacitySize;
-    const title = `主帐号:家庭容量+ ${capacityChange / 1024 / 1024}M`;
-    push(title, content);
+    push("天翼云盘自动签到任务", content);
   }
-})();    
+})();
